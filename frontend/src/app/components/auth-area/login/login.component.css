@@ -1,0 +1,84 @@
+h2 {
+    font-family: "Adobe Devanagari";
+    margin-top: 10px;
+    font-size: xx-large;
+    font-weight: bold;
+    color:#0d273d;
+}
+
+div {
+    animation: fadeInDown 1s;
+    height: 100%;
+    overflow: auto;
+}
+
+
+form {
+
+    width: 85%;
+    height: 520px;
+    overflow: auto;
+    background-color: white;
+    border-radius: 20px;
+    display: inline-block;
+    align-items: center;
+    padding-right: 0;
+    font-size: large;  
+}
+
+label {
+    font-family: "Adobe Devanagari";
+    color: black;
+    font-weight: bolder;
+    text-align: center;
+
+}
+
+button {
+    text-align: center;
+	width: 85%;
+    height: 40px;
+    font-size: medium;
+    font-weight: bolder;
+    background-color: #0099ff;
+    color: white;
+    border-radius: 7px 7px 7px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+span {
+    text-align: center;
+    font-family: "Adobe Devanagari";
+    color: red;
+    text-shadow: black 0.5px 0.5px 1px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+input[type="image"] {
+    width: 28px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    float: left;
+    margin-left: 20px;
+    background-color: white;
+}
+
+input, select {
+    text-align: center;
+	width: 85%;
+    height: 30px;
+    font-size: medium;
+    font-weight: bolder;
+    background-color: rgb(223, 223, 223);
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}

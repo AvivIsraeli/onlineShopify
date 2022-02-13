@@ -1,0 +1,13 @@
+<div>
+    <form #myForm="ngForm">
+        <br>
+        <h2>Add Category</h2>
+        <input #nameBox="ngModel" type="text" name="categoryName" [(ngModel)]="category.categoryName" placeholder="Name"
+            required />
+        <br>
+        <span *ngIf="nameBox.errors?.required && nameBox.touched">Missing Name of category !</span>
+        <br>
+        <button (click)="addCategory()" [disabled]="myForm.form.invalid">Add</button>
+        <br><br>
+    </form>
+</div>

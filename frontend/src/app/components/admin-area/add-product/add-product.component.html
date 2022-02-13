@@ -1,0 +1,31 @@
+<div>
+    <form #myForm="ngForm">
+        <br>
+        <h2>Add Product</h2>
+        <input #nameBox="ngModel" type="text" name="productName" [(ngModel)]="product.productName" placeholder="Name"
+            required />
+        <br>
+        <span *ngIf="nameBox.errors?.required && nameBox.touched">Missing Name of Product !</span>
+        <br>
+        <input #priceBox="ngModel" type="number" name="price" [(ngModel)]="product.price" placeholder="Price"
+            step="0.90" required />
+        <br>
+        <span *ngIf="priceBox.errors?.required && priceBox.touched">Missing Price of Product !</span>
+        <br>
+        <label>Category: </label><br>
+        <select #categoryBox="ngModel" placeholder="choose category" name="categoryId" [(ngModel)]="product.categoryId"
+            required>
+            <option disabled selected value="0">choose category</option>
+            <option *ngFor="let c of categories" value="{{c.id}}">{{c.categoryName}}</option>
+        </select>
+        <br>
+        <span *ngIf="categoryBox.errors?.required && categoryBox.touched">Missing Category of Product !</span>
+        <br> <label>image:</label> <br>
+        <img src="{{imageDisplay}}" style="width: 140px" />
+        <br>
+        <input type="file" accept="image/*" (change)="saveImage($event)">
+        <br>
+        <button (click)="addProduct()" [disabled]="myForm.form.invalid">Add</button>
+        <br><br>
+    </form>
+</div>

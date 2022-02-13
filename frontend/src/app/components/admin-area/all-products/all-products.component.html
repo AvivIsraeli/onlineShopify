@@ -1,0 +1,48 @@
+<div class="page">
+    <br>
+    <div class="grid">
+        <div class="col-12 sm:col-12 md:col-12 lg:col-12">
+            <h2>Admin Page</h2>
+        </div>
+        <div class="col-6 sm:col-6 md:col-6 lg:col-6">
+            <button routerLink="/add-product">Add Product</button>
+        </div>
+        <div class="col-6 sm:col-6 md:col-6 lg:col-6">
+            <button routerLink="/add-category">Add Category</button>
+        </div>
+        <div class="col-12 sm:col-12 md:col-12 lg:col-12">
+            <input class="search" type="text" [(ngModel)]="textToSearch" placeholder="Search Product" required />
+            &nbsp;&nbsp;
+            <input type="image" src="assets/images/search.png" (click)="searchProduct()" />&nbsp;&nbsp;
+            <input class="refresh" type="image" src="assets/images/refresh.png" (click)="clearInputSearch()" />
+        </div>
+    </div>
+    <br>
+
+     <!-- spinner -->
+     <app-spinner *ngIf="!products"></app-spinner>
+
+    <table *ngIf="products?.length">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Category</th>
+                <th>Price</th>
+            
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <td>{{p.productName}}<br><img src="{{imageUrl + p.imageName}}" /></td>
+                <td>{{p.categoryName}}</td>
+                <td>{{p.price | currency:'USD': true}}</td>
+                <td> <input type="image" src="assets/images/delete.png" (click)="deleteProduct(p.id)" /></td>
+                <td> <input type="image" src="assets/images/update.png" routerLink="/update-product/{{p.id}}" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <p-confirmDialog [style]="{width: '400px'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-danger">
+    </p-confirmDialog>
+</div>

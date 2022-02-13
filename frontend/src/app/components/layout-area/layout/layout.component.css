@@ -1,0 +1,24 @@
+.container {
+    height: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 15% 80% 5%;
+}
+
+header {
+    width: 100%;
+    grid-column: span 12;
+    background-image: linear-gradient(#66c2ff, #b3e0ff, white);
+}
+footer {
+    width: 100%;
+    grid-column: span 12;
+    background: #66c2ff;   
+}
+
+main {
+    grid-column: span 12;
+    width: 100%;
+    overflow-x: hidden;
+}

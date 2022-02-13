@@ -1,0 +1,123 @@
+/* // styling menu: */
+#toggle {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#sideNav {
+    z-index: 80;
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    width: 300px;
+    height: 100%;
+    background: #004d99;
+    filter: opacity(0.95);
+    transition: 0.5s;
+}
+
+#sideNav.active {
+    right: 0px;
+}
+
+#sideNav ul {
+    margin-right: 30px;
+    margin-top: 100px;
+    text-align: center;
+}
+
+#sideNav ul > li > a {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 10px;
+    letter-spacing: 1.5px;
+    font-size: large;
+    color: white;
+    transition: 0.1s;
+}
+
+a:hover {
+    background-color: #33adff;
+    border-radius: 3px;
+}
+
+.line1,
+.line2,
+.line3 {
+    width: 40px;
+    height: 4px;
+    background-color: #696969;
+    margin: 9px 0;
+    transition: 0.4s;
+}
+
+.active .line1 {
+    transform: rotate(-45deg) translate(-10px, 8px);
+    background-color: whitesmoke;
+}
+
+.active .line2 {
+    opacity: 0;
+    transform: translate(-20px, 0px);
+}
+
+.active .line3 {
+    transform: rotate(45deg) translate(-10px, -8px);
+    background-color: whitesmoke;
+}
+
+/* styling logo: */
+
+.responsiveImage {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 100%;
+    max-width: 110px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* back-button */
+input[type="image"] {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    overflow: hidden;
+    left: 130px;
+    top: 22px;
+    cursor: pointer;
+}
+
+.cart {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    overflow: hidden;
+    right: 100px;
+    top: 18px;
+    cursor: pointer;
+}
+
+h3 {
+    text-align: center;
+    width: 27px;
+    height: 27px;
+    background-color: red;
+    color: white;
+    border-radius: 110%;
+    position: absolute;
+    overflow: hidden;
+    font-size: smaller;
+    right: 80px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 50;
+
+}
+
+

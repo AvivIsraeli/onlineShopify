@@ -1,0 +1,10 @@
+{
+    "isProduction": true,
+    "mysql": {
+        "host": "us-cdbr-east-05.cleardb.net",
+        "user": "ba8c427c215dd7",
+        "password": "2e7190f1",
+        "name": "heroku_9ab15a25c8010b8"
+    },
+    "jwtKey": "ThereIsNoPlaceLikeHome"
+}

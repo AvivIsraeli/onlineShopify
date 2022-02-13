@@ -1,0 +1,26 @@
+<nav>
+    <!-- search input -->
+    <input id="search" type="text" [(ngModel)]="textToSearch" placeholder="Search Product" required /> &nbsp;
+
+    <!-- icon search -->
+    <input type="image" src="assets/images/search.png" (click)="searchProduct()">
+    <br>
+    <!-- Link of get All-products -->
+    <a (click)="getAllProducts()" routerLinkActive="active-link"> All-Products</a>
+
+    <!-- categories link  -->
+    <a class="categories" *ngFor="let c of categories" (click)="productsByCategory(c)" routerLinkActive="active">
+        {{c.categoryName}} </a>
+    <br>
+
+    <div class="background">
+
+        <!-- search not found -->
+        <h1 *ngIf="!products?.length">The Product: "{{textToSearch}}" is Not Found.</h1>
+
+        <!-- spinner -->
+        <app-spinner *ngIf="!products"></app-spinner>
+
+        <app-product-card class="cards" *ngFor="let p of products" [product]="p"></app-product-card>
+    </div>
+</nav>

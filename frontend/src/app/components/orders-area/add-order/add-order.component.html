@@ -1,0 +1,53 @@
+<div>
+     
+    <form #myForm="ngForm" (submit)="addOrder()">
+        <br>
+        <h3>Final-Price: <br> <span class="finalPrice">{{this.finalPrice | currency:"USD"}}</span> </h3>
+       
+        <label>city</label><br>
+        <select #city="ngModel" type="text" name="city" [(ngModel)]="order.city" placeholder="city" required value="city">
+            <option disabled selected value="0">choose city</option>
+            <option>Rishon Le Zion</option>
+            <option>Tel Aviv</option>
+            <option>Elat</option>
+            <option>Jarusalem</option>
+            <option>Haifa</option>
+            <option>Rehovot</option>
+            <option>Natanya</option>
+            <option>Ramat Gan</option>
+            <option>Holon</option>
+            <option>Herzeliya</option>
+
+        </select>
+        <br>
+        <span *ngIf="city.errors?.required && city.touched">Missing city !</span>
+        <br>
+        
+        <input #street="ngModel" type="text" name="street" [(ngModel)]="order.street" placeholder="street" required />
+        <br>
+        <span *ngIf="street.errors?.required && street.touched">Missing street !</span>
+        <br>
+        
+        <label>Delivery Date</label>
+        <br>
+        <input #DeliveryDate="ngModel" type="date" name="DeliveryDate" placeholder="DeliveryDate" [(ngModel)]="order.DeliveryDate" required />
+        <br>
+        <span *ngIf="DeliveryDate.errors?.required && DeliveryDate.touched">Missing delivery date!</span>
+        <br>
+        
+        <input #idCard="ngModel" type="number" name="idCard" [(ngModel)]="order.idCard" required placeholder="ID-Card">
+        <br>
+        <span *ngIf="idCard.errors?.required && idCard.touched">Missing idCard !</span>
+        <br>
+        
+        <input #creditCard="ngModel" type="number" name="creditCard" [(ngModel)]="order.creditCard"
+            placeholder="credit-card" required />
+        <br>
+        <span *ngIf="creditCard.errors?.required && creditCard.touched">Missing credit card !</span>
+        <br>
+
+        <button [disabled]="myForm.form.invalid">Buy-Now</button>
+    </form>
+
+
+</div>

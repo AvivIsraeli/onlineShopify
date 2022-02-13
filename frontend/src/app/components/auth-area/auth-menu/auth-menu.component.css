@@ -1,0 +1,28 @@
+div {
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    cursor: pointer;
+    text-shadow: 0.5px 0.5px 1px black;
+    margin-left: 5px;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: 5px;
+    letter-spacing: 1.5px;
+    font-size: medium;
+    color: white;
+
+}
+a:hover {
+    background-color: #33adff;
+    border-radius: 3px;
+}
+
+span {
+    padding: 5px;
+    letter-spacing: 1.5px;
+    font-size: medium;
+    color: white;
+}

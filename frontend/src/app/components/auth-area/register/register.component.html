@@ -1,0 +1,42 @@
+<div>
+
+    <form #myForm="ngForm" (submit)="register()">
+        <br>
+        <h2>Register</h2>
+
+        <input #firstName="ngModel" type="text" name="firstName" [(ngModel)]="user.firstName" required
+            pattern="^[A-Z].*$" placeholder="First-Name">
+        <br>
+        <span *ngIf="firstName.errors?.required && firstName.touched">Missing First Name !</span>
+        <span *ngIf="firstName.errors?.pattern && firstName.touched">First Name must start with a capital-letter.</span>
+        <br>
+
+        <input #lastName="ngModel" type="text" name="lastName" [(ngModel)]="user.lastName" required
+            placeholder="Last-Name">
+        <br>
+        <span *ngIf="lastName.errors?.required && lastName.touched">Missing Last Name !</span>
+        <br>
+
+        <input #email="ngModel" type="email" name="email" [(ngModel)]="user.email" required
+            pattern="^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$" placeholder="Email">
+        <br>
+        <span *ngIf="email.errors?.required && email.touched">Missing email !</span>
+        <span *ngIf="email.errors?.pattern && email.touched">invalid Email ! <br>
+            Example: expression@gmail.com</span>
+        <br>
+
+        <input #password="ngModel" type="password" name="password" [(ngModel)]="user.password" required placeholder="Password">
+        <br>
+        <span *ngIf="password.errors?.required && password.touched">Missing password !</span>
+        <br>
+        <button [disabled]="myForm.form.invalid">Sign-Up</button>
+        <br><br>
+        <p>Email must contain @ and a valid extension.<br>First Name must start with a capital-letter.</p>
+
+
+
+    </form>
+
+
+
+</div>

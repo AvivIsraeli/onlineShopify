@@ -1,0 +1,52 @@
+div{
+    margin-top: 25px;
+    height: 96%;
+    overflow: auto;
+}
+
+table {
+    width: 95%;
+    margin: auto;
+    font-family: "Arial";
+    text-align: center;  
+    border-collapse: collapse;
+}
+
+td:hover {
+    background-color: deepskyblue;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+td {
+    padding: 12px;
+    font-weight: light;
+    font-size: 13px;
+}
+
+tr{ 
+    background-color: silver;
+}
+tr:nth-of-type(even) {
+    background-color: rgb(221, 221, 221);
+}
+
+th {
+    padding: 8px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: black;
+    background: white;
+}
+
+h3 { 
+    font-family: "Adobe Devanagari";
+    color: #113f67;
+    font-size: xx-large;
+    text-decoration: underline;
+}
+h4 { 
+    font-family: "Adobe Devanagari";
+    color: red;
+    font-size: xx-large;
+}

@@ -1,0 +1,84 @@
+div{
+    margin-top: 15px;
+    display: block;
+    height: 95%;
+    overflow: auto;
+
+}
+.back {
+    color: rgb(91, 91, 228);
+    font-weight: bolder;
+    font-size: x-large;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+p {  
+    font-family: "Adobe Devanagari";
+    padding: 20px;
+    font-size: x-large;  
+    line-height: 20px
+}
+
+.download{
+    font-family: "Adobe Devanagari";
+    padding: 5px;
+    margin-top: 20px;
+    font-size: x-large;  
+}
+
+button {
+    width: 120px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    background-color: #3385ff;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    border-radius: 5px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border: 1px solid grey;
+}
+
+table {
+   
+    margin: auto;
+    font-family: "Adobe Devanagari";
+    text-align: center; 
+}
+
+td:hover {
+    background-color: deepskyblue;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+}
+
+td {
+    padding: 12px;
+    font-weight: light;
+    font-size: 15px;
+}
+
+tr{ 
+    background-color: white;
+}
+tr:nth-of-type(even) {
+    background-color: rgb(221, 221, 221);
+}
+
+th {
+    padding: 10px;
+    font-size: 15px;
+    font-weight: bolder;
+    color: white;
+    background: black;
+}
+
+h3 { 
+    font-family: "Adobe Devanagari";
+    color: #113f67;
+    font-size: xx-large;
+    text-decoration: underline;
+}

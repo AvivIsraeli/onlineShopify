@@ -1,0 +1,28 @@
+<div>
+    <h3>Orders-History:</h3>
+
+
+    <h4 *ngIf="!orders?.length">You have never placed an order</h4>
+    <!-- spinner -->
+    <app-spinner *ngIf="!orders"></app-spinner>
+    <table *ngIf="orders?.length">
+        <thead>
+            <tr>
+                <th>city</th>
+                <th>street</th>
+                <th>Delivery Date</th>
+                <th>final price</th>
+                <th>credit Card</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let o of orders.reverse()">
+                <td>{{o.city}}</td>
+                <td>{{o.street}}&nbsp;</td>
+                <td>{{o.DeliveryDate.substring(0,10)}} </td>
+                <td>{{o.finalPrice}}$</td>
+                <td>{{o.creditCard}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,117 @@
+.page {
+    overflow: auto;
+    width: 235px;
+    height: 380px;
+    box-shadow: 1px 2px 5px silver;
+    border-radius: 10px;
+    display: inline-block;
+    align-items: center;
+    padding-right: 0;
+    font-size: large;
+    background: whitesmoke;
+    margin: 25px;
+    margin-top: 25px;
+    animation: bounceIn 1s;
+}
+
+label {
+    text-align: center;
+    font-size: medium;
+    color: black;
+    margin-bottom: 15px;
+}
+
+
+img {
+    width: 145px;
+    height: 125px;
+    border-radius: 15px;
+    border: 0.5px solid silver;
+    vertical-align: middle;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #404040;
+    font-family: "arial";
+    font-size: 25px;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 15px;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: "arial";
+}
+
+input[type="image"] {
+    text-align: center;
+    margin-top: 5px;
+    width: 40px;
+}
+
+.addButton {
+    text-align: center;
+    width: 80px;
+    height: 35px;
+    margin-top: 4px;
+    background-color: #3385ff;
+    color: white;
+    font-size: medium;
+    border-radius: 5px;
+    border: 2px solid white;
+}
+
+#plusMinusContainer {
+    text-align: center;
+    display: inline;
+    background-color: white;
+    padding: 7px;
+    border-radius: 7px;
+    box-shadow: 0.5px 0.5px 3px silver;
+}
+
+#plus {
+    text-align: center;
+  
+    color: black;
+    font-weight: bolder;
+    font-size: medium;
+    width: 33px;
+    height: 33px;
+    border: none;
+    background-color: white;
+}
+
+#minus {
+    text-align: center;
+    color: black;
+    font-weight: bolder;
+    font-size: medium;
+    width: 33px;
+    height: 33px;
+    border: none;
+    background-color: white;
+}
+.amount {
+    margin: 10px;
+    font-size: large;
+    border-radius: 4px;
+    width: 50px;
+    height: 33px;
+    text-align: center;
+    border: none;
+    overflow: hidden;
+}
+.amount:active {
+    margin: 10px;
+    font-size: large;
+    border-radius: 4px;
+    width: 50px;
+    height: 33px;
+    text-align: center;
+    border: none;
+    overflow: hidden;
+}

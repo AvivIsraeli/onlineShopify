@@ -1,0 +1,86 @@
+.page {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+table {
+    width: 100%;
+    margin: auto;
+    font-family: "Arial";
+    text-align: center;
+    border-collapse: collapse;
+   
+}
+
+td {
+    padding: 10px;
+    font-weight: light;
+    font-size: medium;
+    
+    
+}
+
+tr {
+    background-color: silver;
+    
+}
+tr:nth-of-type(even) {
+    background-color: rgb(221, 221, 221);
+}
+
+th {
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bolder;
+    color: white;
+    background: black;
+}
+
+
+input[type="image"] {
+    width: 28px;
+}
+
+.search {
+    width: 70%;
+    height: 30px;
+    text-align: center;
+    border-radius: 8px;
+    border: 0.2px solid grey;
+    font-size: large;
+    background-color: whitesmoke;
+    color: black;
+    margin-top: 0;
+}
+
+
+h2 {
+    font-size: 30px;
+    font-family: "arial";
+    font-weight: bold;
+    color:  #0a2741;    
+}
+
+img {
+    width: 70px;
+    border-radius: 5px;
+    border: 1px solid rgb(197, 196, 196);
+    vertical-align: middle;
+}
+
+button {
+    text-align: center;
+    width: 110px;
+    height: 37px;
+    background-color: #3385ff;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+    border: 0.5px solid silver;
+}
+
+
+
+

@@ -1,0 +1,41 @@
+<div>
+    <p>Your order has been successfully received.
+        <br><br>
+        We do our best to deliver your shipment to you as soon as possible, so Please wait patiently.
+    </p>
+    <h3>Your order details:</h3>
+    <!-- <div>{{this.lastOrder}}</div> -->
+
+    <table>
+        <thead>
+            <tr>
+                <th>city</th>
+                <th>street</th>
+                <th>Delivery Date</th>
+                <th>final price</th>
+                <th>credit Card</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let o of lastOrder">
+                <td>{{o.city}}</td>
+                <td>{{o.street}}&nbsp;</td>
+                <td>{{o.DeliveryDate.substring(0,10)}} </td>
+                <td>{{o.finalPrice}}$</td>
+                <td>{{o.creditCard}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+   
+        <p class="download">you can download your reception</p>
+        <button (click)="downloadPdf()">download</button>
+    <br>
+    <p> start a <a class="back" (click)="refreshCart()"> New Purchase</a>
+        <br><br>
+        Thank you for choosing to shop with us. <br> we hope you enjoyed our service.
+    </p>
+
+
+</div>

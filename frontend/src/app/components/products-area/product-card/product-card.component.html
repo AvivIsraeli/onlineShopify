@@ -1,0 +1,16 @@
+<div class="page">
+    <h3>{{product.productName}}</h3>
+    <img [src]="imagesUrl + product.imageName" />
+    <h2>{{product.price | currency:"USD"}}</h2>
+
+    <label>Quantity</label>
+    <br>
+    <div id="plusMinusContainer">
+        <button id="minus" class="pi pi-minus" (click)="minusAmount()"></button>
+        <input class="amount" type="number" name="amount" [(ngModel)]="item.amount" required />
+        <button id="plus" class="pi pi-plus" (click)="plusAmount()"></button>
+    </div>
+    <br>
+    <!-- Button Add item into Cart  -->
+    <button class="addButton" (click)="addItemIntoCart()"> Add</button>
+</div>

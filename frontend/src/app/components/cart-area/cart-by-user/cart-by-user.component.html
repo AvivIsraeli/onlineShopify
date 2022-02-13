@@ -1,0 +1,49 @@
+<div class="page">
+    <br>
+    <div class="grid">
+        <div class="col-12 sm:col-12 md:col-12 lg:col-12">
+            <h1>Shopping cart</h1>
+            <h4 id="empty" *ngIf="!items?.length">your cart is still empty</h4>
+        </div>
+        <div class="col-6 sm:col-6 md:col-6 lg:col-6">
+            <button *ngIf="items?.length" class="addProducts" routerLink="/products-by-category">Products</button>
+        </div>
+        <div class="col-6 sm:col-6 md:col-6 lg:col-6">
+            <button *ngIf="items?.length" class="clear" (click)="removeCart()">Clear</button>
+        </div>
+    </div>
+    <button *ngIf="!items?.length" class="addProducts" routerLink="/products-by-category">Products</button>
+
+    <!-- spinner -->
+    <app-spinner *ngIf="!items"></app-spinner>
+
+    <table *ngIf="items?.length">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of items">
+
+                <td>{{i.productName}}<br><img [src]="imagesUrl + i.productId + '.jpg'"></td>
+                <td>{{i.price | currency:"USD"}}</td>
+                <td>{{i.amount}}</td>
+                <td>{{i.generalPrice | currency:"USD"}}<br><input type="image" src="assets/images/delete.png" (click)="deleteSingleItemFromCart(i)" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h4 *ngIf="items?.length">Final-Price: </h4> &nbsp;
+    <h4 *ngIf="items?.length">{{this.finalPrice | currency:"USD"}}</h4>
+    <br>
+    <button *ngIf="items?.length" class="order" (click)="order()">ORDER</button>
+    <br><br>
+    <!-- modal -->
+    <p-confirmDialog [style]="{width: '400px'}" [baseZIndex]="10000" rejectButtonStyleClass="p-button-danger">
+    </p-confirmDialog>
+</div>
+

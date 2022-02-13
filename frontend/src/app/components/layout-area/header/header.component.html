@@ -1,0 +1,23 @@
+<div class="bg">
+    <img src="assets/images/logo.png" alt="logo" class="responsiveImage" routerLink="/products-by-category">
+    <h3 *ngIf="totalItems !== 0 && user && cart" routerLink="/cart-by-user">{{totalItems}}</h3>
+    <img class="cart" type="image" src="assets/images/cart.png" routerLink="/cart-by-user">
+
+    <div (click)="toggle()" id="toggle">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+
+    <div id="sideNav">
+        <ul>
+            <li *ngIf="isAdmin"><a (click)="remove()" routerLink="/admin" class="pi pi-user-edit">Admin</a></li>
+            <li> <a routerLink="/products-by-category" (click)="remove()" class="pi pi-shopping-bag" >Products</a></li>
+            <li> <a routerLink="/order-history" (click)="remove()" class="pi pi-book">Order-History</a></li>
+            <li> <a routerLink="/about" (click)="remove()" class="pi pi-comment">About</a></li>
+            <li><app-auth-menu (click)="remove()"></app-auth-menu></li>
+        </ul>
+    </div>
+    <input type="image" alt="back" src="assets/images/back.png" (click)="back()" />
+
+</div>
